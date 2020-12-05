@@ -1,0 +1,103 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/*resset*/
+*{margin: 0; padding: 0;}
+a{color: inherit; text-decoration: none;}
+li{list-style: none;}
+
+/*layout*/
+body {font-family: 'Noto Sans KR', sans-serif;font-size: 16px; color:#444;}
+.wrap {width: 100%;}
+.find { display: block; 
+    margin: 20px auto 0; 
+    text-align: center;
+    font-size: 15px; 
+    width: 200px; 
+    font-weight: bold; 
+    padding: 10px 150px; 
+    color:#444; 
+    border:1px solid #ddd; 
+    border-radius: 50px; 
+    position: relative;
+    overflow: hidden;
+    z-index: 1
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #333;
+    font-weight: 600;}
+/* 네비게이션 바 가상선택자 */
+.navbar a {
+    color: #333;
+    padding: 30px;
+    margin-top: 5px;
+    text-decoration: none;
+    text-align: center;}
+  
+/* 커서 올려놨을때 색변화 */
+.navbar a:hover {
+    background-color: #FF8500;
+    color: #fff;}
+.photo {
+    width: 100%; 
+    padding-top: 100px;}
+.photo .titlebox {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;}
+.photo .titlebox h3{
+    font-size: 28px; 
+    font-family: 'Noto Sans KR', sans-serif; 
+    animation-name: slid-up; 
+    animation-duration: 0.8s; 
+    margin-bottom: 10px; }
+@keyframes slid-up {
+    0% {opacity: 0;}
+    30% {opacity: 0; transform: translateY(20px);}
+}
+
+/*ul*/
+.photo ul {
+    width: 1280px; 
+    margin: 0 auto; 
+    overflow: hidden;}
+.photo ul li {
+    float: left; 
+    width: 31.3333%; 
+    margin-right: 3%; 
+    margin-bottom: 50px;}
+.photo ul li:nth-child(1), .photo ul li:nth-child(4) {margin-top: 100px;}
+.photo ul li:nth-child(3), .photo ul li:nth-child(6) {margin-right: 0; margin-top: 100px;}
+.photo ul li a {
+    display: block; 
+    width: 100%; 
+    height: 100%;}
+.photo ul li a p.img {width: 100%;}
+.photo ul li a p.img img {width: 100%;}
+.photo ul li a h3 {margin-top: 50px; padding-left: 35px; position: relative;}
+.photo ul li a h3:after {
+    content : '\f178'; 
+    font-size: 15px;
+    position: absolute;  
+    left: 0; 
+    top: 0; 
+    width: 30px; 
+    height: 30px; 
+    line-height: 30px; 
+    border-radius: 50%; 
+    background-color: #ff8342;}
+.photo ul li a:hover {transform: translateY(-20px); transition: all 0.4s;}
+.photo ul li a .inner {padding-left: 30px;}
+.photo ul li a .inner p.date {font-size: 14px; color: #888;}
+
+/* Footer */
+.footer {
+    height: 100;
+    margin-top: 50px;
+    text-align: center;
+    background: #C8C8C3;
+    color: white;
+  }
